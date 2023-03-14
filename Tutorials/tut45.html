@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Media Query with CSS Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+        /* (We have to give equal no. of columns for each row) */
+          "navbar navbar navbar navbar " /* (for reference it means that 4 fractions of navbar) */
+          "section section section aside" /* (3 fractions of section and 1 fraction of aside) */
+          "footer footer footer footer";
+      }
+      @media only screen and (max-width: 500px) {
+        body {
+          background-color: rgb(243, 140, 140);
+        }
+        .container {
+          grid-template-areas:
+        /* (We have to give equal no. of columns for each row) */
+            "navbar navbar navbar navbar "
+            "section section section section"
+            "aside aside aside aside"
+            "footer footer footer footer";
+        }
+        span {
+          display: block;
+          text-align: center;
+        }
+        aside {
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 500px) and (max-width: 700px) {
+        body {
+          background-color: rgb(195, 195, 81);
+        }
+        .container {
+          grid-template-areas:
+        /* (We have to give equal no. of columns for each row) */
+            "navbar navbar navbar navbar "
+            "section section section section"
+            "aside aside aside aside"
+            "footer footer footer footer";
+        }
+      }
+      @media only screen and (min-width: 700px) and (max-width: 900px) {
+        body {
+          background-color: rgb(135, 236, 135);
+        }
+      }
+      @media only screen and (min-width: 900px) {
+        body {
+          background-color: rgb(124, 124, 231);
+        }
+      }
+      .bdr {
+        border: 2px solid black;
+        padding: 23px;
+        background-color: wheat;
+      }
+      nav {
+        grid-area: navbar;
+      }
+      section {
+        grid-area: section;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="bdr">
+        <span>Home</span>
+        <span>About</span>
+        <span>Services</span>
+        <span>Contact</span>
+      </nav>
+
+      <section class="bdr">
+        <h2>Learn CSS</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nulla
+        quis eius ipsa soluta, aliquid ad earum doloremque quo optio? Minima
+        quas accusamus ut neque. Harum corrupti cum odio? Sequi, voluptatem?
+        Unde dolor harum, deleniti culpa ullam aut commodi quidem sint
+        voluptatum aliquam quas quam. Ex ut eligendi iste ratione reprehenderit
+        temporibus voluptatem corporis libero culpa necessitatibus, quibusdam at
+        molestiae ab, deserunt mollitia blanditiis error nihil? Velit,
+        architecto error aliquam, pariatur veniam placeat explicabo, sit fugiat
+        deleniti nam omnis ipsum. Minus odit porro molestiae earum consequatur
+        sequi maiores doloremque incidunt, iure ipsam nulla explicabo in fuga
+        rem ea sed enim!
+      </section>
+
+      <aside class="bdr">
+        <h1>More about us</h1>
+      </aside>
+
+      <footer class="bdr">Copyright &copy;</footer>
+    </div>
+  </body>
+</html>

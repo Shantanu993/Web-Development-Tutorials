@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Id's and Classes in HTML</title>
+  </head>
+  <body>
+    <h3>Id's and Classes in HTML</h3>
+
+    <!-- Assuming classes (redBG and Blackborder) to be already defined in css -->
+
+    <div id="mainBox" class="redBG">this is mainBox</div>
+
+    <!-- We can assign more than one classes to the element
+       by giving a space between them. Ex redBG and Blackborder-->
+
+    <span class="redBG Blackborder"></span>
+
+    <!-- Using Emmet -->
+
+    <!-- . is for class and # is for id -->
+
+    <!-- span. gives class-->
+
+    <!-- span.redBG gives -->
+    <span class="redBG"></span>
+
+    <!-- div.redBG.Blackborder.anotherclass gives -->
+    <div class="redBG Blackborder anotherclass"></div>
+
+    <!-- span# gives id -->
+
+    <!-- span#mainSpan gives -->
+    <span id="mainSpan"></span>
+
+    <!-- Emmet takes div tag as default -->
+
+    <!-- . gives div class-->
+
+    <!-- .redBG gives -->
+    <div class="redBG"></div>
+
+    <!-- #hello gives -->
+    <div id="hello"></div>
+
+    <!-- Creating Multiple elements using Emmet -->
+
+    <!-- span.myClass1.myClass2.myClass3*4 + enter or tab for printing 4 
+        similar elements using Emmet  + <tab> to toggle cursor down for 
+        writing elements -->
+
+    <span class="myClass1 myClass2 myClass3">First</span
+    ><span class="myClass1 myClass2 myClass3">Second</span
+    ><span class="myClass1 myClass2 myClass3">Third</span
+    ><span class="myClass1 myClass2 myClass3">Fourth</span>
+  </body>
+</html>

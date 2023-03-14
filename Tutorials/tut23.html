@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <style>
+      .navbar {
+        background-color: black;
+        border-radius: 30px;
+      }
+
+      /* we will make all the nav elements come in single horizontal line */
+
+      .navbar li {
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+      }
+      /* The list-style property is used to remove all the bulleted points in the navigation items. */
+
+      /* After writing the above code, the background gets removed (before writing the div element for creating search bar) as it has been overflown by the parent element. To avoid this, we have to write- */
+      .navbar ul {
+        overflow: auto;
+      }
+      .navbar li a {
+        padding: 3px 3px;
+        text-decoration: none;
+        color: white;
+      }
+      .search {
+        float: right;
+        color: white;
+        padding: 12px 75px;
+      }
+
+      /* We can style the menu available in the navigation bar as- */
+      .navbar input {
+        border: 2px solid black;
+        border-radius: 14px;
+        padding: 3px 17px;
+        width: 129px;
+      }
+      .navbar li a:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- A navigation bar is usually a list of links, so using the <ul> and <li> elements can help in obtaining it. -->
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact us</a></li>
+
+          <!-- To create a search bar -->
+          <div class="search">
+            <input
+              type="text"
+              name="Search"
+              id="search"
+              placeholder="Search this website"
+            />
+          </div>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

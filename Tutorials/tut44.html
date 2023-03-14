@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid- Template Area</title>
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+        /* (We have to give equal no. of columns for each row) */
+          "navbar navbar navbar navbar " /* (for reference it means that 4 fractions of navbar) */
+          "section section section aside" /* (3 fractions of section and 1 fraction of aside) */
+          "footer footer footer footer";
+      }
+      .box {
+        background-color: yellow;
+        border: 3px solid black;
+        padding: 10px;
+      }
+      #navbar {
+        grid-area: navbar;
+      }
+      #section {
+        grid-area: section;
+      }
+      #aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="navbar" class="box">Home About Contact Us</div>
+      <div id="section" class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+        dignissimos modi, possimus accusantium dicta saepe ab qui sit
+        praesentium quis est nemo ex! Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Sit, ratione! Nemo cum accusamus sed saepe commodi
+        omnis modi suscipit nisi vero quae sunt unde sit eos, maxime laboriosam
+        deserunt animi?Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Officia similique, cumque laboriosam impedit asperiores reprehenderit
+        quas aliquid, in aperiam saepe earum ad numquam necessitatibus odit
+        repellat quos, illo ipsum voluptatibus!
+      </div>
+      <div id="aside" class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum officia
+        doloribus architecto. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Quaerat ipsa facere non tenetur placeat, aspernatur est corrupti
+        ex sunt porro. Sit autem ratione culpa rem excepturi saepe repellendus
+        a. In! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+        nisi sunt magni soluta iste perspiciatis incidunt aliquam cum et nihil
+        distinctio culpa quidem fugit tempore quod vitae corrupti, laborum
+        doloremque.
+      </div>
+      <!-- <div class="box">Item-1</div>
+      <div class="box">Item-2</div>
+      <div class="box">Item-3</div>
+      <div class="box">Item-4</div>
+      <div class="box">Item-5</div>
+      <div class="box">Item-6</div>
+      <div class="box">Item-7</div>
+      <div class="box">Item-8</div>
+      <div class="box">Item-9</div>
+      <div class="box">Item-10</div>
+      <div class="box">Item-11</div>
+      <div class="box">Item-12</div>
+      <div class="box">Item-13</div>
+      <div class="box">Item-14</div> -->
+    </div>
+    <footer class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sint delectus
+      accusantium. In sequi, hic nobis vero exercitationem earum amet eum animi,
+      porro itaque dolor blanditiis, eaque beatae. Dolores, at.
+    </footer>
+  </body>
+</html>

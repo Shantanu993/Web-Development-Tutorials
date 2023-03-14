@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+    <style>
+      #btn {
+        padding: 10px 14px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: red;
+        border: 2px solid blue;
+        font-weight: bold;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Browser Events:
+
+      mouse events;
+      click
+      contextmenu 
+      mouseover/mouseout
+      mousedown(pressing mouse button)/mouseup(releasing mouse button)
+      mousemove
+
+      form events;
+      submit
+      focus
+
+      DOMContentLoaded
+
+      CSS;
+      transitionend -->
+
+    <div class="container">
+      <h1>This is my heading</h1>
+      <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+        obcaecati necessitatibus veritatis sunt at tenetur fugiat rerum id
+        voluptatem incidunt quidem, sit vero esse reprehenderit suscipit ad
+        ducimus magnam nostrum commodi sequi veniam quis quam. Delectus labore,
+        sequi harum quisquam aliquam beatae! Quae, ut repudiandae nostrum,
+        facilis cumque, fugiat officia quaerat alias deleniti veritatis earum
+        dolorum. Voluptatem labore voluptas quam obcaecati. Dignissimos officia
+        iure, sequi alias ratione temporibus labore eaque quibusdam laudantium
+        deleniti ducimus nulla natus. Exercitationem, id perferendis reiciendis
+        sunt quasi dolor distinctio. Molestias, delectus perferendis reiciendis
+        incidunt quia doloremque, rem, dolore voluptas qui velit porro! Officiis
+        perferendis quisquam cumque nulla voluptas asperiores odio delectus id
+        architecto? Atque labore unde, repellendus aliquid cupiditate doloribus
+        error itaque placeat minima. Sequi excepturi vero dolorum, eos, ipsum
+        cupiditate velit consequuntur, fugit at iure temporibus eligendi!
+        Suscipit, magni mollitia deserunt accusantium quidem sed officiis ipsum
+        vero est omnis sit tenetur ullam eaque! Alias in animi aut at corporis
+        magnam dolore esse nostrum architecto inventore, aliquam blanditiis
+        incidunt tenetur voluptas numquam vel! Ratione sint quia quibusdam
+        incidunt eum illum beatae tempore, eius, iusto illo quasi modi at
+        consequatur pariatur iste quisquam, iure provident impedit dignissimos
+        quidem! Alias eligendi blanditiis odio repellendus, sapiente quae
+        similique.
+      </p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <script>
+      function toggleHide() {
+        // let btn = document.getElementById("btn");
+        // if we don't write this syntax there will be no error that para is not defined because it directly takes one with id para.
+        // but it is a good practise to write it this way.
+        // let para = document.getElementById("para");
+        // ! means not equal to.
+        if (para.style.display != "none") {
+          para.style.display = "none";
+        } else {
+          para.style.display = "block";
+        }
+      }
+
+      let para = document.getElementById("para");
+      para.addEventListener("mouseover", function run() {
+        // alert("Mouse Inside");
+        console.log("Mouse Inside");
+      });
+
+      para.addEventListener("mouseout", function run() {
+        // alert("Mouse Now Went Outside");
+        console.log("Mouse Now Went Outside");
+      });
+    </script>
+  </body>
+</html>

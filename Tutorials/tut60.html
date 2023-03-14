@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      this is arrow functions tutorial.
+    </div>
+    <script>
+      //   function greet() {
+      //     console.log("good morning");
+      //   }
+      //   greet();
+
+      //   Shortcut for writing above
+
+      // Arrow Function
+
+      let greet1 = () => {
+        console.log("Good Morning");
+      };
+      greet1();
+
+      //   where it is used
+      //   we directly made a function inside settimeout which is a shortcut
+
+      setTimeout(() => {
+        // container.innerHTML = new String("hello");
+        console.log("We are inside settimeout");
+      }, 3000);
+
+      //   function prod(a, b) {
+      //     return a * b;
+      //   }
+
+      //   or Shortcut
+
+      //   let sum1 = (a, b) => {
+      //     return a + b;
+      //   };
+
+      //   Shortcut of a shortcut
+      let sum1 = (a, b) => a + b;
+
+      let half = (a) => a / 2;
+
+      //   let greet1 = () => {
+      //     console.log("Good Morning");
+      //   };
+
+      // another way of writing above (shortcut of a shortcut)
+      //   let greet1 = () => console.log("Good Morning");
+
+      let obj1 = {
+        names: ["harry", "rohan", "dj", "ab"],
+        greeting: "good morning",
+
+        speak() {
+          this.names.forEach((student) => {
+            console.log(this.greeting + " hello " + student);
+          });
+        },
+        // when we use arrow function then 'this' is of the parent and is also called lexical 'this'
+        //   by default 'this' in the simple function is it's 'this' and not parent one, but in the arrow function it is not the case and 'this' is of it's parent.
+
+        // below will yield undefined for this.greeting
+        // speak() {
+        //   this.names.forEach(function s(student) {
+        //     console.log(this.greeting + " hello " + student);
+        //   });
+        // },
+      };
+      obj1.speak();
+    </script>
+  </body>
+</html>

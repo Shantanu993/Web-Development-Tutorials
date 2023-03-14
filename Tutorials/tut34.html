@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box shadow and text shadow</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+    }
+    .card {
+      border: 2px solid red;
+      background-color: rgb(153, 229, 207);
+      margin: 4px;
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      /* box-shadow: 5px 5px 20px 5px purple; */
+      /* box-shadow: inset 5px 5px 20px 5px purple; */
+      /* offset-x | offset-y | blur-radius | color */
+      text-shadow: 1px 1px 10px yellow;
+    }
+    #card-1 {
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: inset 5px 5px 20px 5px purple;
+    }
+    #card-2 {
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: 5px 5px 20px 10px rgb(150, 175, 223);
+    }
+    #card-3 {
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: inset 5px 5px 20px 5px rgb(218, 176, 121);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="card" id="card-1">
+        <h2>Card-1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+          doloremque cupiditate quod odio sunt, adipisci vel vitae eos quasi
+          labore quia cum dolorem ullam tempora ut, mollitia est dolor
+          consequatur?
+        </p>
+      </div>
+      <div class="card" id="card-2">
+        <h2>Card-2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+          doloremque cupiditate quod odio sunt, adipisci vel vitae eos quasi
+          labore quia cum dolorem ullam tempora ut, mollitia est dolor
+          consequatur?
+        </p>
+      </div>
+      <div class="card" id="card-3">
+        <h2>Card-3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+          doloremque cupiditate quod odio sunt, adipisci vel vitae eos quasi
+          labore quia cum dolorem ullam tempora ut, mollitia est dolor
+          consequatur?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

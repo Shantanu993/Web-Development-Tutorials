@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript | String Functions</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>This is heading</h1>
+        <p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quae deserunt eaque unde a, doloribus minima rerum laborum earum corporis fugiat dolore possimus obcaecati delectus similique, odio blanditiis ad ducimus consectetur suscipit? Molestiae quaerat tempore enim asperiores odit suscipit obcaecati cupiditate corporis 
+        </p>
+    </div>
+    <script>
+      var str1 = "This is a string";
+      console.log(str1);
+
+      // First occurence of a substring
+      var position = str1.indexOf("is");
+      console.log(position);
+
+      // Last occurence of a substring
+      position = str1.lastIndexOf("is");
+      console.log(position);
+
+      // Substring from a string
+      // var substr1 = str1.slice(1,6)
+    //   var substr1 = str1.substring(1,6)
+      var substr1 = str1.substr(1,6)
+      console.log(substr1)
+
+      // Replacing a substring
+      var replaced = str1.replace('string', 'Ab')
+      console.log(str1)
+      console.log(replaced)
+
+      console.log(str1.toUpperCase())
+      console.log(str1.toLowerCase())
+
+      var newString = str1.concat('New String')
+      console.log(newString)
+
+      var strwithwhitespaces = "    this contains         whitespaces   "
+      console.log(strwithwhitespaces)
+      console.log(strwithwhitespaces.trim())
+
+
+      var char2 = str1.charAt(2)
+      console.log(char2)
+
+    //   slicing 
+      console.log(str1[3])
+    </script>
+  </body>
+</html>

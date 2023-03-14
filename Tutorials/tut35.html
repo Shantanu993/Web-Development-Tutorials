@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables/Custom Properties</title>
+  </head>
+  <style>
+    .box {
+      /* --box-color: chartreuse; */
+      /* (this is a local variable ie. it is only valid inside .box . We have to copy and paste it to use it for other classes or id's. )   */
+      width: 200px;
+      height: 200px;
+      background-color: var(--primary-color);
+      border: 2px solid var(--danger-color);
+      box-shadow: 2px 3px 5px 4px purple;
+      margin: 10px 15px;
+    }
+    .container {
+      display: flex;
+      max-width: var(--maxw);
+      margin: auto;
+      /* (We have used margin auto because we have given it a max width which is less than the width of the page, so display flex will not center it.  ) */
+      justify-content: center;
+      align-items: center;
+      background-color: var(--primary-color);
+      /* (to use the above variable here we will have to assign it a value in this tag also. ) */
+      /* --box-color: chartreuse; */
+    }
+    /* (To solve this problem we can assign a global variable by using :root ) */
+    :root {
+      /* (We usually assign variables with name primary and secondary.)  */
+      --primary-color: chartreuse;
+      --danger-color: red;
+      --maxw: 555px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

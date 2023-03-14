@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .header {
+      overflow: auto;
+    }
+    body {
+      margin: 0px;
+      padding: 0px;
+      background: url(img/bg.jpg);
+      color: white;
+    }
+    .left {
+      height: 100px;
+      border: 2px solid yellow;
+      float: left;
+      /* OR */
+      /* display: inline-block;
+      position: absolute;
+      left: 5px;
+      top: 20px; */
+    }
+    .left .leftimg h3 {
+      height: 25px;
+      width: 82px;
+      padding: 5px;
+      margin: 2px auto;
+      border: 2px solid red;
+      font-size: 20px;
+      color: salmon;
+    }
+    /* (Taken this only for example, how to target a element) */
+    .left .leftimg img {
+      width: 100%;
+      height: 50px;
+    }
+    .mid {
+      float: left;
+      height: 25px;
+      padding: 9px;
+      width: 35%;
+      margin: 0px 50px 0px 33%;
+      border: 2px solid white;
+    }
+    .mid .navbar {
+      background-color: rgb(116, 109, 109);
+      float: left;
+      padding: 4px;
+      margin: 2px;
+    }
+    .right {
+      height: 25px;
+      padding: 9px;
+      border: 2px solid red;
+      float: right;
+      /* OR */
+      /* display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 20px; */
+    }
+  </style>
+  <body>
+    <header class="header">
+      <!-- Left box for logo -->
+      <div class="left">
+        <!-- no need to make a separate div for image, it will be complex to target -->
+        <div class="leftimg">
+          <img src="img/gym.jpg" alt="" />
+          <h3>AB GYM</h3>
+        </div>
+      </div>
+
+      <!-- Mid box for navbar -->
+      <div class="mid">
+        <div class="navbar">
+          <a href="#">HOME</a>
+        </div>
+        <div class="navbar">
+          <a href="#">SERVICES</a>
+        </div>
+        <div class="navbar">
+          <a href="#">FITNESS CALCULATOR</a>
+        </div>
+        <div class="navbar">
+          <a href="#">ABOUT US</a>
+        </div>
+      </div>
+
+      <!-- Right box for buttons -->
+      <div class="right">
+        <button class="btn">SUBMIT</button>
+        <button class="btn">CONTACT US</button>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(123, 149, 161);
+        font-family: "Ubuntu", sans-serif;
+      }
+      .container {
+        width: 900px;
+        margin: 33px auto;
+        /* The auto property of margin allows to automatically adjust the margin equally on the both the ends. */
+        border: 2px solid green;
+        background-color: rgb(194, 172, 230);
+      }
+      .item {
+        margin: 12px 5px;
+        padding: 12px 5px;
+        /* auto property is not valid for padding. */
+        background: rgb(119, 206, 133);
+        border: 2px solid rgb(190, 49, 49);
+      }
+      #fruits {
+        float: right;
+        width: 48%;
+      }
+      #computers {
+        float: left;
+        width: 48%;
+      }
+      #stationary {
+        /* float: left; */
+        /* clear: left;  */
+
+        /* If we write clear: both, then both the other elements will not overlap the stationary section. */
+        clear: both;
+        width: 99%;
+      }
+
+      /* For paragraphs, we have different alignments options like right, left, center, and justify. */
+      p,
+      h3 {
+        /* text-align: right;*/
+        /* text-align: left; */
+        text-align: center;
+        /* text-align: justify; */
+      }
+      h1 {
+        margin: 23px auto;
+        width: 455px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to my Store</h1>
+      <div id="fruits" class="item">
+        <h3>Fruits</h3>
+        <p id="fruitpara" class="para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          debitis ipsum perspiciatis delectus omnis reiciendis cumque modi
+          numquam facilis totam repudiandae amet, ducimus eum quis provident id
+          blanditiis, aspernatur sint.
+        </p>
+      </div>
+      <div id="computers" class="item">
+        <h3>Computers</h3>
+        <p id="computerpara" class="para">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
+          voluptatibus provident ipsum dolore, alias mollitia maiores quae,
+          sequi dolorem minima iusto dolorum quo similique eos dicta illo cumque
+          harum nesciunt?
+        </p>
+      </div>
+      <div id="stationary" class="item">
+        <h3>Stationary</h3>
+        <p id="stationarypara" class="para">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          molestiae aliquid aut dolores quidem tenetur magnam hic similique
+          dolore, et esse illum fuga harum ex in quisquam aspernatur odio sequi!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

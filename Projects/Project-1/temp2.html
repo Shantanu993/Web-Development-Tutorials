@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* CSS Reset */
+      body {
+        margin: 0px;
+        padding: 0px;
+        background: url(img/bg.jpg);
+        /* background-repeat: no-repeat; */
+        color: white;
+      }
+
+      .left {
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        top: 20px;
+        border: 2px solid red;
+        /* background-color: black; */
+      }
+
+      .left img {
+        height: 50px;
+        width: 100px;
+      }
+      .left h3 {
+        margin: 0px 0px;
+        color: purple;
+      }
+      .mid {
+        border: 2px solid green;
+        width: 30%;
+        margin: 20px auto;
+        background-color: black;
+        border-radius: 10px;
+      }
+      .navbar {
+        display: inline-block;
+      }
+      .navbar a {
+        color: green;
+        padding: 5px;
+        text-decoration: none;
+      }
+      .navbar a:hover {
+        color: red;
+      }
+      .right {
+        display: inline-block;
+        border-radius: 5px;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+        border: 2px solid rgb(11, 13, 158);
+        background-color: yellow;
+      }
+      .button {
+        border-radius: 5px;
+        margin: 5px;
+        color: red;
+        background-color: rgb(27, 28, 42);
+      }
+      .button:hover {
+        cursor: pointer;
+        color: chartreuse;
+        background-color: darkblue;
+      }
+      .container {
+        margin: 55px 100px;
+        padding: 20px 30px;
+        background-color: black;
+        height: 350px;
+        width: 500px;
+      }
+      .container h1 {
+        color: red;
+        text-align: center;
+      }
+      .form {
+        height: 253px;
+        width: 257px;
+        margin: 5px auto;
+      }
+      .form input {
+        float: left;
+        clear: both;
+        width: 250px;
+        height: 28px;
+        margin: 2px auto;
+        text-align: center;
+        background-color: white;
+        border: 2px solid rgb(18, 185, 60);
+        border-radius: 5px;
+      }
+
+      .form button {
+        width: 258px;
+        height: 39px;
+        margin: 6px auto;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Left box for logo -->
+      <div class="left">
+        <img src="img/gym.jpg" alt="" />
+        <h3>AB Fitness</h3>
+      </div>
+
+      <!-- Mid box for navbar -->
+      <div class="mid">
+        <!-- should have given a common class to ul instead of giving to eachli -->
+        <ul>
+          <li class="navbar">
+            <a href="#">Home</a>
+          </li>
+          <li class="navbar">
+            <a href="#">Services</a>
+          </li>
+          <li class="navbar">
+            <a href="#">Fitness Calculator</a>
+          </li>
+          <li class="navbar">
+            <a href="#">Join Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right box for buttons -->
+      <div class="right">
+        <button class="button">Sign Up</button>
+        <button class="button">Contact Us</button>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Best GYM in Delhi</h1>
+      <form action="noaction.php" class="form">
+        <input type="text" name="name" placeholder="Write your Name" />
+        <input type="text" name="age" placeholder="Write your Age" />
+        <input
+          type="text"
+          name="phone no."
+          placeholder="Write your Phone No."
+        />
+        <input type="text" name="email" placeholder="Write your Email" />
+        <!-- <input type="email" name="youremail" placeholder="Your Email" /> -->
+        <input type="text" name="locality" placeholder="Write your Locality" />
+        <!-- <input type="submit" value="SUBMIT" /> -->
+        <button class="button">SUBMIT</button>
+      </form>
+    </div>
+  </body>
+</html>

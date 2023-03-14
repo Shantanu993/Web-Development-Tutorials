@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial</title>
+
+    <!-- This is internal CSS -->
+
+    <style>
+      p {
+        color: blue;
+        background-color: rgb(224, 14, 24) !important;
+
+        /* writing !important in front will apply changes irrespective
+            of inline css and the position of code.  */
+      }
+
+      h2 {
+        color: turquoise;
+      }
+    </style>
+
+    <!-- More preference is given to the code written afterwards 
+        except for the inline CSS -->
+
+    <!-- This is linking External CSS -->
+
+    <link rel="stylesheet" href="tut13.css" />
+
+    <!-- The point here to remember is that whether it is the Internal CSS or the External CSS, whichever is written after, gets the priority. But if you want that first one should get priority, so you can add important after it. The result will be, it will get the most priority of all. -->
+  </head>
+  <body>
+    <h2>This is CSS Tutorial</h2>
+
+    <!-- This is inline CSS -->
+
+    <!-- More preference is given to inline css then internal and external -->
+
+    <p style="color: yellow; background-color: turquoise">
+      This Tutorial will teach you everything you need to know about HTML/CSS.
+    </p>
+    <p>
+      This Tutorial will teach you everything you need to know about HTML/CSS.
+    </p>
+  </body>
+</html>

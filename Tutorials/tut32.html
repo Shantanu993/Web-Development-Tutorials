@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute and nth pseudo selectors.</title>
+    <style>
+      .container {
+        width: 233px;
+        margin: auto;
+      }
+      input {
+        display: block;
+      }
+      input[type="text"] {
+        border: 2px solid red;
+        padding: 20px;
+      }
+      a[target] {
+        color: rgb(221, 113, 12);
+        font-size: 60px;
+      }
+      li {
+        list-style: none;
+        font-size: 30px;
+      }
+      li:nth-child(3) {
+        color: aqua;
+      }
+      li:nth-child(2n + 0) {
+        color: rgb(196, 4, 4);
+      }
+      li:nth-child(even) {
+        background-color: black;
+      }
+      li:nth-child(odd) {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><a href="http://google.com" target="_blank">Go To Google</a></h1>
+      <form action="noaction.php" class="form-control">
+        <input type="text" placeholder="Enter you Name." />
+        <input type="password" placeholder="Enter your Password." />
+        <input type="submit" value="SUBMIT" />
+        <!-- (value to be used in submit instead of placeholder) -->
+      </form>
+      <ul>
+        <li class="item" id="item-1">item1</li>
+        <li class="item" id="item-2">item2</li>
+        <li class="item" id="item-3">item3</li>
+        <li class="item" id="item-4">item4</li>
+        <li class="item" id="item-5">item5</li>
+        <li class="item" id="item-6">item6</li>
+        <li class="item" id="item-7">item7</li>
+        <li class="item" id="item-8">item8</li>
+        <li class="item" id="item-9">item9</li>
+        <li class="item" id="item-10">item10</li>
+      </ul>
+    </div>
+  </body>
+</html>

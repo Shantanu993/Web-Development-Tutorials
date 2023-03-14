@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Entities</title>
+  </head>
+  <body>
+    <h2>HTML Entities tutorial</h2>
+    <div class="container">
+      <!-- <p>this is a           paragraph</p> will be displayed with only one space -->
+      <p>this is a paragraph</p>
+    </div>
+
+    <div class="container">
+      <!-- for giving more than one space between words &nbsp; is writtenc for one more space, &nbsp;&nbsp; for two more spaces and so one-->
+
+      <p>this is also a &nbsp; paragraph</p>
+      <p>this is also a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; paragraph</p>
+
+      <!--  but &nbsp; multiple times to give space is unprofessional.
+      Instead we will use css for this -->
+
+      <!-- Entities are also used to write some special characters that you cannot write from keyboards and also those words that are reserved in HTML. -->
+
+      <!-- For example, if we want <p> to appear in the result, then it is not possible without the help of entities.  -->
+      <div class="container">
+        <!-- <div>this is another paragraph<p></p>. Instead this we will be listen as -->
+        <p>this is another paragraph &lt;p&gt;</p>
+
+        <!-- There are hundreds of entities, and we can use them with the help of references(google html entities) -->
+
+        <a href="https://dev.w3.org/html5/html-author/charref" target="blank"
+          >HTML Entities Chart</a
+        >
+
+        <!-- Other examples -->
+        <div class="container">
+          <p>Pound is written like this £</p>
+          <p>Copyright is written like this ©</p>
+          <p>Another character is ⇛</p>
+          <p>Another character is ¼</p>
+          <p>Empty character is written like this ​</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
